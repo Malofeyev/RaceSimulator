@@ -2,6 +2,7 @@
 #include <Game/Game.h>
 
 int main(int argc, char *argv[]) {
+    setlocale(LC_CTYPE, "rus");
     Game game;
     Game::Response response = game.start();
     std::cout << response.message;
