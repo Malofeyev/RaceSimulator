@@ -212,13 +212,13 @@ void Game::assertRightStep(Step step) const {
 
 std::string Game::getTransportListMsg() const {
     int i = 0;
-    while (i < 7) {
+    while (i < countTransport) {
         if (transports[i].hasRegistration) {
             break;
         }
         i++;
     }
-    if (i < 7) {
+    if (i < countTransport) {
         std::string registratedTransportListMsg = 
             Consts::registratedTransportListPrefix;
         registratedTransportListMsg += 
